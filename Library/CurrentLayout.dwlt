@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 524}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -110,10 +110,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 709, y: 474}
-  m_MaxSize: {x: 18004, y: 14024}
+  m_MinSize: {x: 713, y: 474}
+  m_MaxSize: {x: 18008, y: 14024}
   vertical: 0
-  controlID: 123
+  controlID: 72
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 731
-  m_MinSize: {x: 709, y: 474}
-  m_MaxSize: {x: 18004, y: 14024}
+  m_MinSize: {x: 713, y: 474}
+  m_MaxSize: {x: 18008, y: 14024}
   vertical: 0
-  controlID: 124
+  controlID: 73
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 474}
   m_MaxSize: {x: 10002, y: 14024}
   vertical: 1
-  controlID: 61
+  controlID: 110
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,8 +237,8 @@ MonoBehaviour:
     y: 0
     width: 280
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 279, y: 74}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -381,24 +381,24 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 22}
-      m_SelectedIDs: ce450000
-      m_LastClickedID: 17870
-      m_ExpandedIDs: cefbffff744500006c47000016480000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: c6fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Scrollbar Vertical
-        m_OriginalName: Scrollbar Vertical
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 17780
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -446,20 +446,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes/ChangeScene
   m_ViewMode: 1
   m_StartGridSize: 56
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes/ChangeScene
   m_LastFoldersGridSize: 56
   m_LastProjectPath: D:\Downloads\Compressed\shinobiWar\Backup2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 180}
-    m_SelectedIDs: ae2a0000
-    m_LastClickedID: 10926
-    m_ExpandedIDs: 00000000e62600002a280000ae2a00002a2b0000722b0000f62c0000763100000033000098340000463500008837000086390000963a0000ba4b0000bc4b0000be4b0000
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: be2e0000
+    m_LastClickedID: 11966
+    m_ExpandedIDs: 00000000f426000038280000be2a00003a2b0000822b0000062d00008831000012330000aa340000583500009a37000098390000a83a0000e84b0000ea4b0000ec4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -487,7 +487,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e62600002a280000ae2a00002a2b0000722b0000f62c00007631000000330000983400008837000086390000963a0000ba4b0000bc4b0000be4b0000
+    m_ExpandedIDs: 00000000f426000038280000be2a00003a2b0000822b0000062d00008831000012330000aa340000583500009a37000098390000a83a0000e84b0000ea4b0000ec4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -57,6 +57,7 @@
      <Compile Include="Assets\changescene.cs" />
      <Compile Include="Assets\ControllCamera.cs" />
      <Compile Include="Assets\scene.cs" />
+     <Compile Include="Assets\Scenes\ChangeScene\AutoSceneChanger.cs" />
      <Compile Include="Assets\Scripts\ButtonGUI\AbilitesStats.cs" />
      <Compile Include="Assets\Scripts\ButtonGUI\AbilitiesControl.cs" />
      <Compile Include="Assets\Scripts\ButtonGUI\btnOfMenu.cs" />
@@ -96,6 +97,7 @@
      <None Include="Assets\Saves\systemSave.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Scenes\AllScenes.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Ninja Files\Read Me.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
