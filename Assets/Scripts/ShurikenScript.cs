@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShurikenScript : MonoBehaviour
 {
+    public bool aquired;
     public float damage;
     private float existtime = 2;
     private GameObject enemy;

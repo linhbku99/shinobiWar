@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RasenganScript : MonoBehaviour
 {
+    public bool aquired;
     public float damage;
     private Animator myAnimator;
     private float existtime = 2;

@@ -6,6 +6,7 @@ using System;
 
 public class MainPlayer : MonoBehaviour
 {
+    public bool choPhepDiChuyen = true;
     private Rigidbody2D myRigidbody2D;
     private Animator myAnimator;
     private Vector2 direction;
@@ -14,14 +15,14 @@ public class MainPlayer : MonoBehaviour
     public WallClingScript wallClingBox;
     private float maxHealth;
     private float curHealth;
-    
+
     [SerializeField]
     private float speed = 4;
     private bool facingRight;
     private bool grounded = true;
     private bool wallcling = false;
     private float gravityScaleValue = 10;
-    
+
     public AudioSource runAudio;
     public AudioSource jumpAudio;
     public AudioSource downButtonAudio;
@@ -30,18 +31,19 @@ public class MainPlayer : MonoBehaviour
     double jumptime = 1.0;
     void Start()
     {
-        curHealth = playerStats.getCurHeath();
-        maxHealth = playerStats.getTotalHealth();
-        
         facingRight = true;
         myRigidbody2D = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         jump = false;
         slide = false;
         wallcling = wallClingBox.iswallcling;
+        curHealth = playerStats.getCurHeath();
+        maxHealth = playerStats.getTotalHealth();
     }
     void Update()
     {
+        curHealth = playerStats.getCurHeath();
+        maxHealth = playerStats.getTotalHealth();
         wallcling = wallClingBox.iswallcling;
         if (wallcling && !grounded)
         {
@@ -53,6 +55,10 @@ public class MainPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (choPhepDiChuyen == false)
+        {
+            return;
+        }
         if (GetComponent<playerUseSkill>().isAtk) // Không thể vừa đánh vừa di chuyển
         {
             HandleMovement(0f);
@@ -104,8 +110,8 @@ public class MainPlayer : MonoBehaviour
         {
             runAudio.Play();
             myAnimator.SetBool("move", true);
-            
-            
+
+
             if (wallcling && facingRight)
             {
                 wallClingBox.iswallcling = false;
@@ -167,19 +173,19 @@ public class MainPlayer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-       if (other.gameObject.tag == "ground")
-       {
+        if (other.gameObject.tag == "ground")
+        {
             wallClingBox.iswallcling = false;
             wallcling = false;
             grounded = true;
             jump = false;
-       }
+        }
     }
     public void ReceivesDamage(float damage)
     {
-       curHealth -= damage;
+        curHealth -= damage;
         playerStats.UpdateHealth(curHealth);
-       
+
     }
     private void FreezeGravity()
     {
@@ -217,7 +223,7 @@ public class MainPlayer : MonoBehaviour
         myAnimator.SetFloat("jump", 0);
         myAnimator.SetFloat("wallcling", 0);
     }
-    private void setWallClinging ()
+    private void setWallClinging()
     {
         myAnimator.SetFloat("cdn", 0);
         myAnimator.SetFloat("run", 0);
