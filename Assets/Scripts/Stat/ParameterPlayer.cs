@@ -13,6 +13,7 @@ using UnityEngine.SceneManagement;
 public class ParameterPlayer : MonoBehaviour
 {
     public TextMeshProUGUI tmpTxt;
+    public GameObject missionControl;
     [SerializeField]
     private Stat hpbar;
     private string scenePath;
@@ -31,7 +32,7 @@ public class ParameterPlayer : MonoBehaviour
     private Stat[] statSkill = new Stat[6];
     public int skill { get; set; }
     public bool[] waitRecSkill;
-    private class tagParameter
+    public class tagParameter
     {
         public string[] name = new string[20];
         public float[] current = new float[20];
@@ -77,7 +78,7 @@ public class ParameterPlayer : MonoBehaviour
         {
             return;
         }
-        Debug.Log("skill " + skill);
+        missionControl.GetComponent<MissionLoader>().skillUsed(skill);
         StartCoroutine(waitSkill(skill));
         skill = -1;
     }
@@ -263,7 +264,14 @@ public class ParameterPlayer : MonoBehaviour
     {
         return getCur("LV");
     }
-
+    public float getScore()
+    {
+        return getCur("SCORE");
+    }
+    public void addScore(float score)
+    {
+        Change("SCORE", getScore() + score, getScore() + score);
+    }
     public void saveStats()
     {
         string path = Application.dataPath + "/Saves/systemSave.txt";

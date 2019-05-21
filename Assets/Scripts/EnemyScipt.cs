@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyScipt : MonoBehaviour
 {
+    public GameObject missionControl;
     private Animator myAnimator;
     public int speed;
     public float damage;
@@ -53,6 +54,7 @@ public class EnemyScipt : MonoBehaviour
 
         if (curHealth == 0 || curHealth < 0)
         {
+            missionControl.GetComponent<MissionLoader>().addKill();
             if (dist < 20)
             {
                 playerFinder.GetComponent<ParameterPlayer>().AddExp(killreward);

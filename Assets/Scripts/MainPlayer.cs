@@ -6,6 +6,7 @@ using System;
 
 public class MainPlayer : MonoBehaviour
 {
+    public GameObject missionControl;
     public bool choPhepDiChuyen = true;
     private Rigidbody2D myRigidbody2D;
     private Animator myAnimator;
@@ -15,14 +16,12 @@ public class MainPlayer : MonoBehaviour
     public WallClingScript wallClingBox;
     private float maxHealth;
     private float curHealth;
-
     [SerializeField]
     private float speed = 4;
     private bool facingRight;
     private bool grounded = true;
     private bool wallcling = false;
     private float gravityScaleValue = 10;
-
     public AudioSource runAudio;
     public AudioSource jumpAudio;
     public AudioSource downButtonAudio;
@@ -180,12 +179,16 @@ public class MainPlayer : MonoBehaviour
             grounded = true;
             jump = false;
         }
+        if(other.gameObject.tag == "checkpoint")
+        {
+            missionControl.GetComponent<MissionLoader>().setLastHP(curHealth);
+        }
     }
     public void ReceivesDamage(float damage)
     {
         curHealth -= damage;
         playerStats.UpdateHealth(curHealth);
-
+        missionControl.GetComponent<MissionLoader>().checkDropHP(curHealth);
     }
     private void FreezeGravity()
     {

@@ -43,7 +43,6 @@ public class ShurikenScript : MonoBehaviour
     }
     public void UpdateDamage(float newDamage)
     {
-        Debug.Log(damage);
         damage = newDamage;
     }
 }

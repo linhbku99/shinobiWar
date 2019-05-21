@@ -1,9 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+using System;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Text;
+using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class EquipDatabase : MonoBehaviour
 {
@@ -19,13 +24,15 @@ public class EquipDatabase : MonoBehaviour
     public tagParameter line;
     void Start()
     {
+        string path = Application.dataPath + "/Saves/itemSave.txt";
+        tmpTxt.text = File.ReadAllText(path);
         ReadAll();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        saveItem();
     }
     public void ReadAll()
     {
@@ -136,6 +143,16 @@ public class EquipDatabase : MonoBehaviour
         for (int i = 0; i <= line.count; i++)
         {
             tmpTxt.SetText(tmpTxt.text + "ITEM" + i.ToString() + "/" + line.id[i].ToString() + "/" + line.quantity[i].ToString() + "\n");
+        }
+    }
+    public void saveItem()
+    {
+        string path = Application.dataPath + "/Saves/itemSave.txt";
+        ReadAll();
+        // This text is added only once to the file.
+        if (File.Exists(path))
+        {
+            File.WriteAllText(path, input);
         }
     }
 }

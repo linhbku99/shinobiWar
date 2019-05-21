@@ -63,7 +63,7 @@ public class DialogMess : MonoBehaviour
      
         StartCoroutine(hienthimess());
 
-    }
+    }   
     // Start is called before the first frame update
     void Start()
     {

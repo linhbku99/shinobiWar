@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\getKeyOptions.cs" />
      <Compile Include="Assets\Scripts\IAMainPlayer.cs" />
      <Compile Include="Assets\Scripts\MainPlayer.cs" />
+     <Compile Include="Assets\Scripts\MissionLoader.cs" />
      <Compile Include="Assets\Scripts\Options.cs" />
      <Compile Include="Assets\Scripts\playerUseSkill.cs" />
      <Compile Include="Assets\Scripts\RasenganScript.cs" />
@@ -97,11 +98,14 @@
      <None Include="Assets\Saves\systemSave.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Saves\missionDes.txt" />
      <None Include="Assets\Scenes\AllScenes.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Ninja Files\Read Me.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Saves\currentScene.txt" />
+     <None Include="Assets\Saves\missionPool.txt" />
+     <None Include="Assets\Saves\itemSave.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

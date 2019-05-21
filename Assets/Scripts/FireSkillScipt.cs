@@ -50,7 +50,6 @@ public class FireSkillScipt : MonoBehaviour
     }
     public void UpdateDamage(float newDamage)
     {
-        Debug.Log(damage);
         damage = newDamage;
 
     }
