@@ -78,7 +78,7 @@ public class ParameterPlayer : MonoBehaviour
         {
             return;
         }
-        missionControl.GetComponent<MissionLoader>().skillUsed(skill);
+        missionControl.GetComponent<MisionLoader>().skillUsed(skill);
         StartCoroutine(waitSkill(skill));
         skill = -1;
     }
